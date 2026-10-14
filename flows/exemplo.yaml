@@ -1,0 +1,14 @@
+name: exemplo
+loopDelay: 0
+browser:
+  mode: context
+  headless: false
+steps:
+  - action: goto
+    url: https://example.com
+
+  - action: waitFor
+    selector: body
+    
+  - action: screenshot
+    path: screenshots/exemplo.png

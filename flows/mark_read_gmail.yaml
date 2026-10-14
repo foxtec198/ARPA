@@ -1,0 +1,26 @@
+
+name: GMAIL Mark all Read
+loopDelay: 3000 
+
+browser:
+  mode: cdp
+  cdpUrl: "http://127.0.0.1:9222"
+
+steps:
+  - action: goto
+    url: "https://mail.google.com/mail/u/1/#inbox"
+
+  - action: click
+    selector: "div[aria-label='Atualizar']"
+
+  - action: click
+    selector: "div[aria-label='Atualizar']"
+
+  - action: click
+    selector: "div[aria-label='Mais opções de e-mail']"
+
+  - action: click
+    selector: 'div[role="menuitem"]:has-text("Marcar todas como lidas")'
+    
+  - action: click
+    selector: "div[aria-label='Atualizar']"

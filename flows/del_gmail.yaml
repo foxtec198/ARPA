@@ -1,0 +1,19 @@
+name: GMAIL Delete
+loopDelay: 3000 
+
+browser:
+  mode: cdp
+  cdpUrl: "http://127.0.0.1:9222"
+
+steps:
+  - action: goto
+    url: "https://mail.google.com/mail/u/1/#inbox"
+
+  - action: click
+    selector: 'span[role="checkbox"][jslog^="170807"]'
+
+  - action: click
+    selector: 'div[data-tooltip="Excluir"]'
+
+  - action: click
+    selector: "div[aria-label='Atualizar']"
